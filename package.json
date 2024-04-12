@@ -1,0 +1,16 @@
+{
+  "name": "toaddo",
+  "version": "1.0.0",
+  "description": "Task List Project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DariaSokova",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    <h1>toad-day's toad-do</h1>
+
+    <div class="card" id="personalList">
+      <div class="cardheader">
+        <p>TODAY</p>
+      </div>
+      <div class="tasksField">
+      <% if (locals.list2){%>     
+              <% for (let i = 0; i < list2.length; i++) { %>
+                  <input type="checkbox" id="item">
+                  <label for="item"> <%= list2[i] %> </label>
+                  <br />
+              <%} %>    
+        <% } else { %>
+          <h2>waiting for tasks...</h2>
+        <% } %>
+      </div>
+      
+
+      <div class="new-task-form">
+
+        <form action="/submit" method="POST">
+          <input type="text" name="newPersonalTask" placeholder="new task" autocomplete="off">
+          <input type="submit" class="submit-button" value="🐸">
+        </form>
+      </div>
+      </div>
+
+<%- include("partials/footer.ejs") %>
